@@ -1,4 +1,4 @@
-SHELL   = /bin/sh
+SHELL   = /usr/bin/env sh
 FC	= gfortran
 FLAGS	= -Wall -Wextra -Wconversion -O3
 SOURCES = main.f
