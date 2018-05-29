@@ -4,15 +4,15 @@
 
 c     Parses file into array
       OPEN (log, FILE='array')
-      DO n = 1, 10
+      DO 10 n = 1, 10
          READ (log, *) t(n)
-      ENDDO
+ 10   CONTINUE
       CLOSE (log)
 
 c     Sort
       DO WHILE (sorted .EQ. 0)
          sorted = 1
-         DO n = 1, 9
+         DO 20 n = 1, 9
             IF (t(n) .GT. t(n + 1)) THEN
                tmp = t(n)
                t(n) = t(n + 1)
@@ -21,7 +21,7 @@ c     Sort
             ELSE
                CONTINUE
             ENDIF
-         ENDDO
+ 20      CONTINUE
       ENDDO
 
 c     Print sorted array
