@@ -25,8 +25,8 @@ c     Sort
       ENDDO
 
 c     Print sorted array
-      DO n = 1, 10
+      DO 30 n = 1, 10
          PRINT *, t(n)
-      ENDDO
+ 30   CONTINUE
 
       END PROGRAM BUBBLESORT
